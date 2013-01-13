@@ -1,0 +1,32 @@
+<%= form_for @company, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :nimi, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nimi, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :kayntiosoite, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :kayntiosoite, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :laskutusosoite, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :laskutusosoite, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :ytunnus, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :ytunnus, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                companies_path, :class => 'btn' %>
+  </div>
+<% end %>

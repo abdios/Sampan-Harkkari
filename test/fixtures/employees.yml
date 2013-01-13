@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  nimi: MyString
+  email: MyString
+  osoite: MyString
+  tilinro: MyString
+  puhnro: MyString
+
+two:
+  nimi: MyString
+  email: MyString
+  osoite: MyString
+  tilinro: MyString
+  puhnro: MyString

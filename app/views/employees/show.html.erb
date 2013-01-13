@@ -1,0 +1,31 @@
+<%- model_class = Employee -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:nimi) %>:</strong></dt>
+  <dd><%= @employee.nimi %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
+  <dd><%= @employee.email %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:osoite) %>:</strong></dt>
+  <dd><%= @employee.osoite %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tilinro) %>:</strong></dt>
+  <dd><%= @employee.tilinro %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:puhnro) %>:</strong></dt>
+  <dd><%= @employee.puhnro %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:company_id) %>:</strong></dt>
+  <dd><%= @employee.company_id %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              employees_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_employee_path(@employee), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              employee_path(@employee),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
